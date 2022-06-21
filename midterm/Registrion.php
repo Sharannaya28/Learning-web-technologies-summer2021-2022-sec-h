@@ -36,21 +36,21 @@
 	
 	
 	//usertypeName valusertypeNameation
-	if($usertypeName == null){
-		$error_usertypeName = "*usertypeName is required<br>";
+	if($username == null){
+		$error_username = "*id is required<br>";
 	}
 	else if(!preg_match("/^[a-zA-Z0-9_\.\s]*$/",$usertypeName)){
-		$error_usertypeName = "*Only contain letter '_' and '.' also need to be start with a letter<br>";
+		$error_username = "*Only contain letter '_' and '.' also need to be start with a letter<br>";
 	}
 	else{
-		//Chech if usertypeName is already exist or not
-		$file = fopen('usertype.txt', 'r');
+		//Chech if id is already exist or not
+		$file = fopen('user.txt', 'r');
 		
 		while (!feof($file)) {
 			$data = fgets($file);
 			$usertype = explode("|", $data); 
-			if(trim($usertype[0])== $usertypeName){
-				$error_usertypeName = "*usertypeName already taken.";
+			if(trim($user[0])== $username){
+				$error_username = "*id already taken.";
 			}
 		}
 	}
@@ -58,19 +58,19 @@
 	
 	//passwordword
 	if($password == null || $password == null){
-		$error_password = "*passwordword is required<br>";
+		$error_password = "*password is required<br>";
 	}
 	else if(strlen($password) != 6){
 		$error_password = "*6 digit only <br>";
 	}
 	else if($password != $password){
-		$error_password = "*passwordword not matched<br>";
+		$error_password = "*password not matched<br>";
 	}
 	
 	
 	
 	
-	//usertype type valusertypeNameation
+	//usertype type 
 	if($usertype == null){
 		$error_usertype = "*usertype type is required<br>";
 	}
@@ -78,9 +78,9 @@
 	
 	
 	//if no error than go to login page
-	if ($error_Name=="" && $error_usertypeName=="" && $error_usertype==""  $error_password==""){
+	if ($error_Name=="" && $error_username=="" && $error_usertype==""  $error_password==""){
 		
-		$usertype = $usertypeName."|".$password."|".$Name."|".$usertype."\r\n";
+		$usertype = $username."|".$password."|".$Name."|".$usertype."\r\n";
 		
 		//write a file
 		$file = fopen('usertype.txt', 'a');
