@@ -26,13 +26,13 @@ if($username == null || $password == null){
 					<td>username Id <br><input type="text" name="id" value="" placeholder="ID"/></td>
 				</tr>
 				<tr>
-					<td>passwordword<br><input type="passwordword" name="password" value="" placeholder="passwordword"/> </td>
+					<td>password<br><input type="password" name="password" value="" placeholder="passwordword"/> </td>
 				</tr>
 				<tr>
 					<hr>
 					<td>
 						<input type="submit" name="submit" value="Submit"/>
-						<a href="registration.html"> Register </a>
+						<a href="Registration.html"> Register </a>
 					</td>
 				</tr>
 				<tr align="center">
@@ -75,7 +75,7 @@ else{
 					<td>username Id <br><input type="text" name="id" value="" placeholder="ID"/></td>
 				</tr>
 				<tr>
-					<td>passwordword<br><input type="passwordword" name="password" value="" placeholder="passwordword"/> </td>
+					<td>passwordword<br><input type="password" name="password" value="" placeholder="password"/> </td>
 				</tr>
 				<tr>
 					<hr>
